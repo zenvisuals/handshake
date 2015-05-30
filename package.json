@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/zenvisuals/handshake",
   "dependencies": {
+    "bcrypt": "^0.8.3",
     "chai": "^2.3.0",
     "express": "^4.12.4",
     "mocha": "^2.2.5",
     "mongoose": "^4.0.4"
-  }
+  },
+  "devDependencies": {}
 }
