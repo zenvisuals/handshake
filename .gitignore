@@ -33,3 +33,6 @@ node_modules
 
 # config file
 config.js
+
+#DS_STORE file
+.DS_Store
