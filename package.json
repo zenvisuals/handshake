@@ -4,7 +4,7 @@
   "description": "REST API for wearable and mobile app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha -w"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/zenvisuals/handshake",
   "dependencies": {
-    "express": "^4.12.4"
+    "chai": "^2.3.0",
+    "express": "^4.12.4",
+    "mocha": "^2.2.5",
+    "mongoose": "^4.0.4"
   }
 }
