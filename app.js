@@ -1,11 +1,13 @@
 var express = require('express'),
-		app = express(),
-		config = require('./config')();
+		app = module.exports = express(),
+		config = require('./config')(),
+		port = config.port || 3000,
+		mode = config.mode || 'local';
 
 app.get('/', function(req, res) {
 	res.send('Hello World');
 });
 
-var server = app.listen(config.port, function(){
-	console.log("Server is on " + config.mode + " mode, port: " + config.port);
+var server = app.listen(port, function(){
+	console.log("Server is on " + mode + " mode, port: " + port);
 })

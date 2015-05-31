@@ -18,10 +18,14 @@
   "homepage": "https://github.com/zenvisuals/handshake",
   "dependencies": {
     "bcrypt": "^0.8.3",
-    "chai": "^2.3.0",
+    "bluebird": "^2.9.27",
     "express": "^4.12.4",
-    "mocha": "^2.2.5",
     "mongoose": "^4.0.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "chai-as-promised": "^5.0.0",
+    "mocha": "^2.2.5",
+    "node-mocks-http": "^1.4.2"
+  }
 }

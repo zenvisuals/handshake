@@ -1,7 +1,9 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     bcrypt = require('bcrypt'),
-    SALT_WORK_FACTOR = 10;
+    SALT_WORK_FACTOR = 10,
+    Promise = require('bluebird');
+
 
 var UserSchema = new Schema({
   email: {
@@ -36,5 +38,9 @@ UserSchema.pre('save', function(done){
     })
   })
 })
+
+var User = mongoose.model('User', UserSchema);
+Promise.promisifyAll(User);
+Promise.promisifyAll(User.prototype);
 
 module.exports = mongoose.model('User', UserSchema);
