@@ -1,4 +1,3 @@
-var Promise = require('bluebird');
 var BaseController = require('./BaseController');
 var util = require('util');
 var app = require('../app');
@@ -15,11 +14,7 @@ UserController.prototype._create = function(req, res, next) {
 };
 
 UserController.prototype._read = function(req, res, next){
-  console.log("reading twice");
   next("i think i hit something");
 };
-
-Promise.promisifyAll(UserController);
-Promise.promisifyAll(UserController.prototype);
 
 module.exports = UserController;

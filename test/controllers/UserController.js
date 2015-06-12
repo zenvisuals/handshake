@@ -19,10 +19,25 @@ beforeEach(function(done){
 
 describe('UserController', function(){
   var userCtrl;
+
   beforeEach(function(){
     userCtrl = new UserController(app);
-  })
-  it('should resolve no matter what', function(){
-    userCtrl._read();
   });
+
+  describe('constructor', function(){
+
+    it('should be okay', function(){
+      expect(userCtrl).to.be.ok;
+    });
+
+    it('result should be something', function(done){
+      userCtrl._read(req, res, function(result){
+        console.log(result);
+        expect(result).to.be.ok;
+        done();
+      })
+    })
+
+  })
+
 });
